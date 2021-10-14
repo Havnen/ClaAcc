@@ -6,6 +6,8 @@ Include('whatevefile.inc'),once
 
 CpTagHandler
 This is a collection of methods that I use to Tag and Untag records, or to preserve looked up data.
+
+```Clarion
 TagHandler CpTagHandler
 Code
  TagHandler.AddTag(record:Id)
@@ -15,7 +17,8 @@ Code
  
  If TagHandler.IsTagged(Record:id)
  end
-  
+
+```  
  
 
 
@@ -35,7 +38,7 @@ Failed                      Equate(': Failed: ')
                 counter.Increment(InsertedCompanies & Failed)
             END
        End
-       And in the end
+       !And in the end
        Message(counter.ToSTring())
 ```    
 #CpCachedFileManager 

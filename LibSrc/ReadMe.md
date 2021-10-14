@@ -22,11 +22,13 @@ Code
 #CpCounterClass.
 I use this when I need ot count multiple things and present the result.
 
+Data
 counter                     cpcounterclass
 InsertedCompanies           EQUATE('New companies')
 UpdatedCompanies            Equate('Updated companies')
 Failed                      Equate(': Failed: ')
-    
+
+CODE
        if Access:Companies.Insert()=Level:Benign
                 counter.Increment(InsertedCompanies)
             ELSE

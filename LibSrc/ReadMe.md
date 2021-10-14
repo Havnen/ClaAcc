@@ -21,6 +21,7 @@ Code
 
 #CpCounterClass.
 I use this when I need ot count multiple things and present the result.
+
 counter                     cpcounterclass
 InsertedCompanies           EQUATE('New companies')
 UpdatedCompanies            Equate('Updated companies')
@@ -34,4 +35,8 @@ Failed                      Equate(': Failed: ')
        End
        And in the end
        Message(counter.ToSTring())
-       
+    
+#CpCachedFileManager 
+is used to ensure that we do not go all the way to the MSSQL for every lookup. This saves a lot of network activity for all those tables that are used for show.
+Any record looked up using the primary key will be cached for 60 seconds, or until an Update is encountered. 
+Override the Individual File overrides in global.

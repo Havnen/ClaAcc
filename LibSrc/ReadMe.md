@@ -12,7 +12,7 @@ TagHandler CpTagHandler
 Code
  TagHandler.AddTag(record:Id)
  Loop cnt=1 To TagHandler.Records()
-    Message(TagHandler.Fetch(cnt)
+    Message(TagHandler.Fetch(cnt))
  end
  
  If TagHandler.IsTagged(Record:id)

@@ -45,3 +45,17 @@ Failed                      Equate(': Failed: ')
 is used to ensure that we do not go all the way to the MSSQL for every lookup. This saves a lot of network activity for all those tables that are used for show.
 Any record looked up using the primary key will be cached for 60 seconds, or until an Update is encountered. 
 Override the Individual File overrides in global.
+
+#CpTable2d
+Dynamic building of a table in like a spreadsheet and present in listbox using Prop:vlbproc
+Supports style, icons and tooltip.
+
+```   
+     r=Typer.GetRow(Winnertype:WinnertypeId)
+        Typer.SetCellValue(r,Typer.GetColNo('Linetype'),Winnertype:CalcGroupNr)
+        Typer.SetCellValue(r,Typer.GetColNo('Description'),Winnertype:Beskrivelse)
+        Typer.SetCellValue(r,Typer.GetColNo(VariantType:Shortname),colval,WinVarType:SysId,style,icon,WinVarType:SourceField&Choose(Not WinVarType:WinnerType,'','  '&WinVarType:WinnerType))
+        typer.SetListControl(?LIST1)
+typer.SetListHeaders(?LIST1)
+ ```   
+ 

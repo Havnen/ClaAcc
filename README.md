@@ -6,4 +6,5 @@ Includes
 CpTagHandler
 CpCachedFileManager
 CpCounterClass
+CpTable2D
 ```
